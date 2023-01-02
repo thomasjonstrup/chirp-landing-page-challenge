@@ -1,0 +1,213 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+import twitter from '../assets/twitter.svg';
+import heroDesktop from '../assets/hero-image-desktop.png';
+import userAvatar01 from '../assets/userAvatar01.svg';
+import userAvatar02 from '../assets/userAvatar02.svg';
+import userAvatar03 from '../assets/userAvatar03.svg';
+import userAvatar04 from '../assets/userAvatar04.svg';
+import userAvatar05 from '../assets/userAvatar05.svg';
+import userAvatar06 from '../assets/userAvatar06.svg';
+import userAvatar07 from '../assets/userAvatar07.svg';
+import userAvatar08 from '../assets/userAvatar08.svg';
+import userAvatar09 from '../assets/userAvatar09.svg';
+import checkmark from '../assets/checkmark.svg';
+---
+
+<Layout title='Chirp.'>
+	<main>
+		<section
+			class='flex flex-col md:flex-row bg-lightorange py-[50px] px-[100px]'
+		>
+			<div class='md:w-[50%] pt-6 pr-4'>
+				<h1 class='font-bold text-5xl pb-4'>
+					Twitter analytics taken to a whole new level.
+				</h1>
+				<p class='pb-4'>
+					Chirp is a suite of Twitter analytics that will help you
+					better understand your audience, which tweets they like, and
+					most imortantly, when they are the most active on Twitter.
+				</p>
+				<button
+					class='flex p-2 bg-blue rounded-md items-center gap-1 text-white'
+				>
+					<img src={twitter} class='w-3.5 h-3.5' alt='twitter logo' />
+					Sign in with Twitter
+				</button>
+
+				<div class='pt-4 pb-4'>
+					<img
+						src={userAvatar01}
+						alt='avatar 01'
+						class='inline-block'
+					/>
+					<img
+						src={userAvatar02}
+						alt='avatar 02'
+						class='inline-block ml-[-27.5px]'
+					/>
+					<img
+						src={userAvatar03}
+						alt='avatar 03'
+						class='inline-block ml-[-27.5px]'
+					/>
+					<img
+						src={userAvatar04}
+						alt='avatar 04'
+						class='inline-block ml-[-27.5px]'
+					/>
+					<img
+						src={userAvatar05}
+						alt='avatar 05'
+						class='inline-block ml-[-27.5px]'
+					/>
+					<img
+						src={userAvatar06}
+						alt='avatar 06'
+						class='inline-block ml-[-27.5px]'
+					/>
+					<img
+						src={userAvatar07}
+						alt='avatar 07'
+						class='inline-block ml-[-27.5px]'
+					/>
+					<img
+						src={userAvatar08}
+						alt='avatar 08'
+						class='inline-block ml-[-27.5px]'
+					/>
+					<img
+						src={userAvatar09}
+						alt='avatar 09'
+						class='inline-block ml-[-27.5px]'
+					/>
+				</div>
+
+				<p>
+					Join <span>195</span> others who have analyzed their followers
+					and scheduled <span>1342</span> tweets.
+				</p>
+			</div>
+			<div class='md:w-[50%]'>
+				<img
+					src={heroDesktop}
+					alt='Hero image'
+					class='h-[100%] object-contain float-right'
+				/>
+			</div>
+		</section>
+		<section>
+			<div class='max-w-screen-xl mx-auto py-[50px] px-[100px]'>
+				<h2>Features that help you Tweet smarter.</h2>
+				<div class='grid grid-cols-2 gap-x-8'>
+					<div>
+						<div class='icon'>📈</div>
+						<h3>Analytics</h3>
+					</div>
+					<div>
+						<div class='icon'>😎</div>
+						<h3>Script Analyzer</h3>
+					</div>
+					<div>
+						<div class='icon'>🗞</div>
+						<h3>Schedule Your Tweets</h3>
+					</div>
+					<div>
+						<div class='icon'>☀</div>
+						<h3>Dark Mode</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class='bg-lightblue py-[50px] px-[100px]'>
+			<div class='max-w-screen-xl mx-auto'>
+				<h2>What our customers say</h2>
+			</div>
+		</section>
+		<section class='py-[50px] px-[100px]'>
+			<div
+				class='max-w-screen-xl mx-auto prices text-center flex items-center flex-col'
+			>
+				<h2>One simple price plan.</h2>
+				<p>
+					Start growing your Twitter account by analyzing your
+					follower's patterns.
+				</p>
+				<div
+					class='pricing rounded-md bg-lightorange border-orange-400 border mt-6 p-[30px]'
+				>
+					<p>Monthly</p>
+					<p>$9<span>/mo</span></p>
+					<hr />
+					<div class='flex space-x-4 my-2'>
+						<img
+							src={checkmark}
+							alt='checkmark'
+							class='inline-block'
+						/>
+						<p>Unlimited* scheduled tweets and threads.</p>
+					</div>
+					<div class='flex space-x-4 my-2'>
+						<img
+							src={checkmark}
+							alt='checkmark'
+							class='inline-block'
+						/>
+						<p>Schedule up to 3 weeks in advance.</p>
+					</div>
+					<div class='flex space-x-4 my-2'>
+						<img
+							src={checkmark}
+							alt='checkmark'
+							class='inline-block'
+						/>
+						<p>
+							Real-time audience analytics tracking up to 5k
+							followers.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 		<p class="instructions">
+			To get started, open the directory <code>src/pages</code> in your project.<br />
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul> -->
+	</main>
+</Layout>
+
+<style>
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

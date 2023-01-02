@@ -1,0 +1,106 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import twitter from '../assets/twitter.svg';
+import twitterBlack from '../assets/twitter-(Black).svg';
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link rel='preconnect' href='https://fonts.googleapis.com' /><link
+			rel='preconnect'
+			href='https://fonts.gstatic.com'
+			crossorigin
+		/><link
+			href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap'
+			rel='stylesheet'
+		/>
+		<meta name='generator' content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class='font-sans text-base font-normal'>
+		<header class='bg-lightorange'>
+			<div class='max-w-screen-xl mx-auto'>
+				<nav class='flex p-6 justify-between'>
+					<a href='/'>
+						<i class='text-blue font-bold'>Chirp.</i>
+					</a>
+					<div class='flex items-center space-x-4'>
+						<ul class='flex space-x-4'>
+							<li>
+								<a href='/'>Home</a>
+							</li>
+							<li>
+								<a href='/pricing'>Pricing</a>
+							</li>
+							<li>
+								<a href='/faq'>FAQ</a>
+							</li>
+						</ul>
+						<button
+							class='flex p-2 bg-blue rounded-md items-center gap-1 text-white'
+						>
+							<img
+								src={twitter}
+								class='w-3.5 h-3.5'
+								alt='twitter logo'
+							/>
+							Sign in with Twitter
+						</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<slot />
+		<footer class='bg-lightblue'>
+			<div class='max-w-screen-xl mx-auto flex p-6 justify-between'>
+				<a href='/'>
+					<i class='text-blue'>Chirp.</i>
+				</a>
+				<ul class='flex space-x-4 items-center'>
+					<li>
+						<img
+							src={twitterBlack}
+							class='w-3.5 h-3.5'
+							alt='twitter logo'
+						/>
+					</li>
+					<li>
+						<a href='/priacy-policy'>Privacy Policy</a>
+					</li>
+					<li>
+						<a href='/terms'>Terms of Use</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			#da62c4 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #f6f6f6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>
