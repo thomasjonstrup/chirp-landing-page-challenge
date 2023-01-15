@@ -16,6 +16,7 @@ module.exports = {
 				blue: '#00acee',
 				lightblue: '#d7f5f5',
 				lightorange: '#fbf8f3',
+				'gray-c': 'rgb(116, 116, 116)',
 			},
 		},
 	},
